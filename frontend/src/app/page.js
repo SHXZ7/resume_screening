@@ -108,7 +108,6 @@ export default function HomePage() {
 
         {/* Enterprise Credibility Infinite Marquee (Moving Leftwards) */}
         <div className={styles.techStrip}>
-          <span className={styles.techStripLabel}>BUILT WITH ENTERPRISE DATA & MACHINE LEARNING ARCHITECTURE</span>
           <div className={styles.marqueeContainer}>
             <div className={styles.marqueeTrack}>
               {techStack.map((tech, idx) => (
