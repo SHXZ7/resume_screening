@@ -322,7 +322,7 @@ export default function ScreenerDashboard() {
         <div className={styles.panelCard}>
           <div className={styles.cardHeader}>
             <h2 className={styles.cardTitle}>1. Target Job Description</h2>
-            <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+            <div className={styles.cardHeaderActions}>
               <input
                 id="jd-file-input"
                 type="file"
@@ -453,10 +453,10 @@ export default function ScreenerDashboard() {
               onChange={handleResumeInput}
             />
             <div className={styles.dropzoneIcon}>📂</div>
-            <div style={{ fontSize: "13px", fontWeight: 700, color: "var(--text-black)" }}>
-              Drag & drop candidate resumes here
+            <div className={styles.dropzoneTitle}>
+              Tap or drag & drop candidate resumes
             </div>
-            <div style={{ fontSize: "11px", color: "var(--text-muted)", marginTop: "2px" }}>
+            <div className={styles.dropzoneSubtitle}>
               Supports batch upload of multiple files simultaneously
             </div>
           </div>
@@ -534,9 +534,9 @@ export default function ScreenerDashboard() {
                     >
                       <div className={styles.candidateLeft}>
                         <div className={styles.candidateAvatar}>{initial}</div>
-                        <div>
-                          <div className={styles.candidateTitle} style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
-                            <span>#{c.rank} • {c.filename}</span>
+                        <div className={styles.candidateBody}>
+                          <div className={styles.candidateTitleRow}>
+                            <span className={styles.candidateName}>#{c.rank} • {c.filename}</span>
                             {c.is_shortlisted !== undefined && (
                               <span className={c.is_shortlisted ? styles.shortlistBadgeYes : styles.shortlistBadgeNo}>
                                 {c.is_shortlisted ? `✓ Shortlisted (${c.shortlist_probability}%)` : `Review (${c.shortlist_probability}%)`}
@@ -607,14 +607,14 @@ export default function ScreenerDashboard() {
                 className={`${styles.modalTab} ${candidateModalTab === "overview" ? styles.modalTabActive : ""}`}
                 onClick={() => setCandidateModalTab("overview")}
               >
-                📊 Overview & Skills
+                📊 Overview
               </button>
               <button
                 type="button"
                 className={`${styles.modalTab} ${candidateModalTab === "projects" ? styles.modalTabActive : ""}`}
                 onClick={() => setCandidateModalTab("projects")}
               >
-                💼 Projects & Work ({activeModalCandidate.projects?.length || 0})
+                💼 Projects ({activeModalCandidate.projects?.length || 0})
               </button>
               <button
                 type="button"
@@ -626,7 +626,7 @@ export default function ScreenerDashboard() {
                   }
                 }}
               >
-                🧠 AI Recruiter Report
+                🧠 AI Report
               </button>
             </div>
 

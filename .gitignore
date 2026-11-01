@@ -3,11 +3,8 @@
 # ==============================================================================
 
 # Environment files & Secrets
-.env
-.env.*
 !.env.example
 *.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -52,7 +49,6 @@ yarn-error.log*
 # OS & IDE
 .DS_Store
 Thumbs.db
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -63,3 +59,4 @@ Thumbs.db
 scratch/
 test_*.py
 
+config.bat

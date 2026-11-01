@@ -133,7 +133,8 @@ export default function HomePage() {
               className={`${styles.canvasTab} ${activeTab === "leaderboard" ? styles.canvasTabActive : ""}`}
             >
               <span className={styles.tabIcon}>🏆</span>
-              <span>1. Leaderboard & Fit Ranking</span>
+              <span className={styles.tabDesktopText}>1. Leaderboard & Fit Ranking</span>
+              <span className={styles.tabMobileText}>Leaderboard</span>
             </button>
             <button
               type="button"
@@ -141,7 +142,8 @@ export default function HomePage() {
               className={`${styles.canvasTab} ${activeTab === "projects" ? styles.canvasTabActive : ""}`}
             >
               <span className={styles.tabIcon}>💼</span>
-              <span>2. Deep Project & Code Extractor</span>
+              <span className={styles.tabDesktopText}>2. Deep Project & Code Extractor</span>
+              <span className={styles.tabMobileText}>Projects</span>
             </button>
             <button
               type="button"
@@ -149,7 +151,8 @@ export default function HomePage() {
               className={`${styles.canvasTab} ${activeTab === "decision" ? styles.canvasTabActive : ""}`}
             >
               <span className={styles.tabIcon}>🌳</span>
-              <span>3. 30k Shortlisting Decision Engine</span>
+              <span className={styles.tabDesktopText}>3. 30k Shortlisting Decision Engine</span>
+              <span className={styles.tabMobileText}>30k Engine</span>
             </button>
           </div>
         </div>
