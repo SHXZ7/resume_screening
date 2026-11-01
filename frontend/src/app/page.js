@@ -64,8 +64,7 @@ export default function HomePage() {
         </Link>
 
         <Link href="/dashboard" className={styles.btnLaunch}>
-          <span>Launch Screener</span>
-          <span className={styles.arrowIcon}>→</span>
+          Launch
         </Link>
       </nav>
 
