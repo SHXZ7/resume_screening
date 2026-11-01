@@ -56,57 +56,21 @@ export default function HomePage() {
 
   return (
     <div className={styles.container}>
-      {/* Top Navbar - Databricks Floating Enterprise Bar */}
+      {/* Top Navbar */}
       <nav className={styles.nav}>
-        <div className={styles.navLeft}>
-          <Link href="/" className={styles.logo}>
-            <span className={styles.logoMark}>◆</span>
-            <span className={styles.logoText}>talentai</span>
-            <span className={styles.logoBadge}>ENTERPRISE ML</span>
-          </Link>
-          <div className={styles.navDivider}></div>
-          <div className={styles.navLinks}>
-            <a href="#architecture" className={styles.navLink}>Architecture</a>
-            <a href="#how-it-works" className={styles.navLink}>How It Works</a>
-            <a href="#showcase" className={styles.navLink}>Interactive Preview</a>
-            <a href="#benchmarks" className={styles.navLink}>Benchmarks (30k)</a>
-            <a href="#academic" className={styles.navLink}>Academic Team</a>
-          </div>
-        </div>
+        <Link href="/" className={styles.logo}>
+          <span className={styles.logoMark}>◆</span>
+          <span className={styles.logoText}>talentai</span>
+        </Link>
 
-        <div className={styles.navRight}>
-          <a
-            href="https://github.com/SHXZ7/resume_screening"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.gitLink}
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-            </svg>
-            <span>GitHub</span>
-          </a>
-          <Link href="/dashboard" className={styles.btnLaunch}>
-            <span>Launch Screener</span>
-            <span className={styles.arrowIcon}>→</span>
-          </Link>
-        </div>
+        <Link href="/dashboard" className={styles.btnLaunch}>
+          <span>Launch Screener</span>
+          <span className={styles.arrowIcon}>→</span>
+        </Link>
       </nav>
 
-      {/* Hero Section - Databricks Enterprise Style */}
+      {/* Hero Section */}
       <section className={styles.heroSection}>
-        {/* Release Pill Badge */}
-        <div className={styles.announcementWrapper}>
-          <Link href="/dashboard" className={styles.announcementBadge}>
-            <span className={styles.badgePulse}></span>
-            <span className={styles.badgeTag}>NEW ENGINE</span>
-            <span className={styles.badgeText}>
-              Hybrid ML v2.0 • 30k Shortlisting Decision Engine & Project Extractor
-            </span>
-            <span className={styles.badgeArrow}>→</span>
-          </Link>
-        </div>
-
         {/* Hero Headline */}
         <h1 className={styles.heroHeadline}>
           The Unified Data & AI Platform for <br />
