@@ -94,16 +94,12 @@ export default function HomePage() {
           deep project extraction, and a <strong>Gradient Boosting Decision Engine</strong> trained on 30,000 enterprise candidates.
         </p>
 
-        {/* Dual High-Impact Action CTAs */}
+        {/* Primary Action CTA */}
         <div className={styles.heroActions}>
           <Link href="/dashboard" className={styles.btnPrimaryLg}>
             <span>Launch Screener Dashboard</span>
             <span className={styles.btnIcon}>→</span>
           </Link>
-          <a href="#how-it-works" className={styles.btnSecondaryLg}>
-            <span>Explore 3-Stage Pipeline</span>
-            <span className={styles.btnArrowDown}>↓</span>
-          </a>
         </div>
 
         {/* Enterprise Credibility Infinite Marquee (Moving Leftwards) */}
