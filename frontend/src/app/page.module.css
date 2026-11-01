@@ -323,10 +323,12 @@
   color: #B48B1C;
 }
 
-/* Tech Strip Credibility Ribbon */
+/* Tech Strip Credibility Ribbon - Infinite Marquee Leftwards */
 .techStrip {
   border-top: 1px solid var(--border-subtle);
   padding-top: 24px;
+  overflow: hidden;
+  position: relative;
 }
 
 .techStripLabel {
@@ -335,25 +337,74 @@
   font-weight: 800;
   letter-spacing: 1.2px;
   color: var(--text-light);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.techPills {
+.marqueeContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 6px 0;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.marqueeTrack {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  width: max-content;
+  gap: 12px;
+  animation: scrollLeftwards 28s linear infinite;
+  will-change: transform;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeftwards {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .techPill {
-  font-size: 11.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--text-dark);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid #ECE6D8;
-  padding: 5px 12px;
+  padding: 6px 14px;
   border-radius: var(--radius-pill);
+  white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.15s ease-in-out;
+  cursor: default;
+}
+
+.techPill:hover {
+  background: #FFFFFF;
+  border-color: #D6CCA8;
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================

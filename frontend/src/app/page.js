@@ -54,6 +54,18 @@ export default function HomePage() {
     },
   ];
 
+  const techStack = [
+    { icon: "⚡", label: "Scikit-Learn" },
+    { icon: "🌳", label: "Gradient Boosting (30k)" },
+    { icon: "🚀", label: "FastAPI Asynchronous" },
+    { icon: "🧠", label: "Groq Llama 3.3 LPU" },
+    { icon: "📐", label: "Sublinear TF-IDF Bi-grams" },
+    { icon: "📄", label: "PyPDF & pdfplumber" },
+    { icon: "⚛️", label: "Next.js 16 & React 19" },
+    { icon: "🎯", label: "Cosine Similarity Matching" },
+    { icon: "📊", label: "Kaggle 30k Benchmarks" },
+  ];
+
   return (
     <div className={styles.container}>
       {/* Top Navbar */}
@@ -94,17 +106,24 @@ export default function HomePage() {
           </a>
         </div>
 
-        {/* Enterprise Credibility Ribbon */}
+        {/* Enterprise Credibility Infinite Marquee (Moving Leftwards) */}
         <div className={styles.techStrip}>
           <span className={styles.techStripLabel}>BUILT WITH ENTERPRISE DATA & MACHINE LEARNING ARCHITECTURE</span>
-          <div className={styles.techPills}>
-            <span className={styles.techPill}>⚡ Scikit-Learn</span>
-            <span className={styles.techPill}>🌳 Gradient Boosting (30k)</span>
-            <span className={styles.techPill}>🚀 FastAPI Asynchronous</span>
-            <span className={styles.techPill}>🧠 Groq Llama 3.3 LPU</span>
-            <span className={styles.techPill}>📐 Sublinear TF-IDF Bi-grams</span>
-            <span className={styles.techPill}>📄 PyPDF & pdfplumber</span>
-            <span className={styles.techPill}>⚡ Next.js 16 & React 19</span>
+          <div className={styles.marqueeContainer}>
+            <div className={styles.marqueeTrack}>
+              {techStack.map((tech, idx) => (
+                <span key={`tech-1-${idx}`} className={styles.techPill}>
+                  <span>{tech.icon}</span>
+                  <span>{tech.label}</span>
+                </span>
+              ))}
+              {techStack.map((tech, idx) => (
+                <span key={`tech-2-${idx}`} className={styles.techPill}>
+                  <span>{tech.icon}</span>
+                  <span>{tech.label}</span>
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
