@@ -1,0 +1,20 @@
+Job Title: Python Backend Developer
+Location: Hybrid
+Company: CloudScale Solutions
+
+Job Overview:
+We are looking for an experienced Python Backend Developer to join our engineering team. You will be responsible for creating robust microservices, designing RESTful APIs, and optimizing database queries for high scalability.
+
+Key Responsibilities:
+- Develop high-performance backend services and REST APIs using Python, FastAPI, and Django.
+- Design relational database schemas and optimize queries in PostgreSQL / MySQL.
+- Implement caching with Redis and message queues using Celery or RabbitMQ.
+- Build automated unit and integration tests with PyTest.
+- Work with CI/CD pipelines, Docker containers, and cloud deployment on AWS.
+
+Required Skills:
+- Strong programming skills in Python, OOP, and data structures.
+- Hands-on experience with FastAPI, Django, or Flask.
+- Experience with PostgreSQL, MySQL, Redis, and ORMs (SQLAlchemy).
+- Proficiency with Git, GitHub, Docker, and Linux environments.
+- Understanding of microservices architecture and API security best practices.

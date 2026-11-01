@@ -1,0 +1,10 @@
+# Backend Specific Gitignore
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+venv/
+.venv/
+test_*.py
+

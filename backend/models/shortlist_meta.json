@@ -1,0 +1,29 @@
+{
+  "model_type": "GradientBoostingClassifier",
+  "total_training_samples": 30000,
+  "accuracy": 90.62,
+  "roc_auc": 0.9665,
+  "f1_score": 0.9333,
+  "feature_names": [
+    "years_experience",
+    "skills_match_score",
+    "education_num",
+    "project_count",
+    "resume_length",
+    "github_activity"
+  ],
+  "feature_importances": {
+    "years_experience": 0.6213,
+    "skills_match_score": 0.0984,
+    "education_num": 0.0324,
+    "project_count": 0.115,
+    "resume_length": 0.0291,
+    "github_activity": 0.1038
+  },
+  "education_mapping": {
+    "High School": 0,
+    "Bachelors": 1,
+    "Masters": 2,
+    "PhD": 3
+  }
+}

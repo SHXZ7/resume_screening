@@ -1,0 +1,20 @@
+Job Title: Machine Learning & Data Science Engineer
+Location: Remote / Bangalore
+Company: AI Innovations Corp
+
+About the Role:
+We are seeking a talented Data Scientist / Machine Learning Engineer with a solid background in statistical analysis, machine learning algorithms, and deep learning architectures. You will develop predictive models, design NLP pipelines, and deploy ML models into production.
+
+Key Responsibilities:
+- Design, train, and validate ML and Deep Learning models using Python, Scikit-learn, PyTorch, or TensorFlow.
+- Perform exploratory data analysis, feature engineering, and data cleaning with Pandas, NumPy, and SQL.
+- Implement NLP pipelines for text classification, entity extraction, and sentiment analysis.
+- Build interactive dashboards and prototypes using Streamlit or Plotly.
+- Collaborate with software engineers to containerize and deploy models using Docker and AWS.
+
+Required Qualifications & Skills:
+- Proficiency in Python, SQL, and data structures.
+- Strong practical experience with Scikit-learn, Pandas, NumPy, and Matplotlib.
+- Hands-on experience with NLP, deep learning, PyTorch or TensorFlow.
+- Familiarity with Git, Docker, and REST APIs (FastAPI/Flask).
+- Excellent analytical and problem-solving skills, with a collaborative mindset.

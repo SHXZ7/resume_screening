@@ -1,0 +1,30 @@
+{
+  "Data Science & Machine Learning": [
+    "python", "r", "machine learning", "deep learning", "nlp", "natural language processing",
+    "computer vision", "tensorflow", "pytorch", "keras", "scikit-learn", "pandas", "numpy",
+    "scipy", "matplotlib", "seaborn", "plotly", "xgboost", "lightgbm", "data analysis",
+    "data visualization", "sql", "tableau", "power bi", "feature engineering", "predictive modeling",
+    "neural networks", "bert", "transformers", "llm", "huggingface", "opencv", "big data", "spark"
+  ],
+  "Web & Software Development": [
+    "html", "css", "javascript", "typescript", "react", "angular", "vue", "next.js", "node.js",
+    "express", "django", "flask", "fastapi", "spring boot", "java", "c#", ".net", "php",
+    "ruby on rails", "rest api", "graphql", "bootstrap", "tailwind", "jquery", "redux", "microservices"
+  ],
+  "Cloud & DevOps": [
+    "aws", "azure", "gcp", "docker", "kubernetes", "jenkins", "ci/cd", "terraform", "ansible",
+    "git", "github", "gitlab", "linux", "bash", "shell scripting", "nginx", "prometheus", "grafana"
+  ],
+  "Databases": [
+    "mysql", "postgresql", "mongodb", "sqlite", "redis", "oracle", "cassandra", "dynamodb",
+    "elasticsearch", "firebase", "neo4j"
+  ],
+  "Core Engineering & Mobile": [
+    "c", "c++", "go", "rust", "android", "ios", "flutter", "react native", "swift", "kotlin",
+    "data structures", "algorithms", "oop", "system design"
+  ],
+  "Soft Skills & Management": [
+    "agile", "scrum", "leadership", "communication", "problem solving", "teamwork", "critical thinking",
+    "project management", "time management", "collaboration", "jira", "git"
+  ]
+}
