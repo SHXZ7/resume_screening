@@ -474,53 +474,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Databricks Enterprise Comparison Table */}
-      <section className={styles.comparisonSection}>
-        <div className={styles.sectionHeaderCenter}>
-          <span className={styles.sectionEyebrow}>ENTERPRISE ADVANTAGE</span>
-          <h2 className={styles.sectionTitle}>Why TalentAI Outperforms Legacy ATS</h2>
-        </div>
-
-        <div className={styles.tableCard}>
-          <table className={styles.compTable}>
-            <thead>
-              <tr>
-                <th className={styles.tableHeadFeature}>Capability</th>
-                <th className={styles.tableHeadLegacy}>Traditional Keyword Filter</th>
-                <th className={styles.tableHeadTalent}>TalentAI Enterprise ML</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className={styles.cellFeature}>Engineering Domain Prediction</td>
-                <td className={styles.cellLegacy}>❌ None (Naive string search)</td>
-                <td className={styles.cellTalent}>✓ 30 Domains (99.43% NLP Classifier)</td>
-              </tr>
-              <tr>
-                <td className={styles.cellFeature}>Project & Portfolio Auditing</td>
-                <td className={styles.cellLegacy}>❌ Ignored or unparsed</td>
-                <td className={styles.cellTalent}>✓ Full technical project segmentation</td>
-              </tr>
-              <tr>
-                <td className={styles.cellFeature}>Shortlisting Decision Engine</td>
-                <td className={styles.cellLegacy}>❌ Static score threshold</td>
-                <td className={styles.cellTalent}>✓ Gradient Boosting trained on 30k profiles</td>
-              </tr>
-              <tr>
-                <td className={styles.cellFeature}>Explainability & Transparency</td>
-                <td className={styles.cellLegacy}>❌ Blackbox count</td>
-                <td className={styles.cellTalent}>✓ Multi-vector weights + AI Recruiter Report</td>
-              </tr>
-              <tr>
-                <td className={styles.cellFeature}>Interview Question Generation</td>
-                <td className={styles.cellLegacy}>❌ Manual recruiter task</td>
-                <td className={styles.cellTalent}>✓ Project-tailored interview guide via Groq</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
       {/* Databricks-Inspired High-Impact CTA Banner */}
       <div className={styles.ctaBanner}>
         <div className={styles.ctaGlow}></div>
