@@ -144,3 +144,4 @@ Open `http://localhost:3000` in your browser.
 
 ## 🔒 Security & Privacy
 All sensitive credentials, API keys, and local environment files are managed through dedicated `.env` files and excluded from version control via `.gitignore`.
+

@@ -1,26 +1,44 @@
+/* ==========================================================================
+   Databricks-Inspired Enterprise Homepage CSS for TalentAI
+   Palette: Warm Cream (#FCFAF6), Warm Gold/Yellow (#FFC83B), Obsidian (#111111)
+   ========================================================================== */
+
 .container {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 18px 24px 60px;
+  padding: 16px 24px 80px;
 }
 
-/* Nav */
+/* ==========================================================================
+   1. Floating Top Navigation
+   ========================================================================== */
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-pill);
-  margin-bottom: 48px;
-  box-shadow: var(--shadow-sm);
+  margin-bottom: 56px;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 14px;
+  z-index: 100;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  gap: 6px;
   font-size: 20px;
   font-weight: 800;
   letter-spacing: -0.6px;
@@ -28,17 +46,36 @@
   text-decoration: none;
 }
 
-.logoDot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--primary-yellow);
-  margin-left: 2px;
+.logoMark {
+  color: var(--primary-yellow);
+  font-size: 16px;
+  transform: rotate(45deg);
+}
+
+.logoText {
+  letter-spacing: -0.8px;
+}
+
+.logoBadge {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  background: #111111;
+  color: #FFFFFF;
+  padding: 3px 7px;
+  border-radius: 6px;
+  margin-left: 4px;
+}
+
+.navDivider {
+  width: 1px;
+  height: 20px;
+  background: var(--border-card);
 }
 
 .navLinks {
   display: flex;
-  gap: 28px;
+  gap: 22px;
   align-items: center;
 }
 
@@ -47,18 +84,45 @@
   font-weight: 600;
   color: var(--text-muted);
   text-decoration: none;
-  transition: color 0.15s;
+  transition: color 0.15s ease-in-out;
 }
 
 .navLink:hover {
   color: var(--text-black);
 }
 
-.btnBlack {
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.gitLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-card);
+  background: #FFFFFF;
+  transition: all 0.15s ease-in-out;
+}
+
+.gitLink:hover {
+  color: var(--text-black);
+  border-color: #D1C9B8;
+  background: #FAF7F0;
+}
+
+.btnLaunch {
   background: var(--accent-black);
   color: #FFFFFF;
   border: none;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border-radius: var(--radius-pill);
   font-size: 13px;
   font-weight: 700;
@@ -66,90 +130,285 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   transition: all 0.15s ease-in-out;
 }
 
-.btnBlack:hover {
+.btnLaunch:hover {
   background: var(--accent-black-hover);
   transform: translateY(-1px);
 }
 
-.btnYellow {
-  background: var(--primary-yellow);
-  color: var(--text-black);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 10px 22px;
+.arrowIcon {
+  font-size: 14px;
+  transition: transform 0.15s ease-in-out;
+}
+
+.btnLaunch:hover .arrowIcon {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   2. Databricks Hero Section
+   ========================================================================== */
+.heroSection {
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto 64px;
+  padding-top: 12px;
+}
+
+.announcementWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.announcementBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E6DEC8;
+  padding: 6px 18px;
   border-radius: var(--radius-pill);
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease-in-out;
+}
+
+.announcementBadge:hover {
+  border-color: #B48B1C;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.badgePulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.badgeTag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #92400E;
+  background: var(--primary-yellow-light);
+  border: 1px solid #FDE68A;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.badgeText {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-black);
+}
+
+.badgeArrow {
   font-size: 13px;
+  color: #B48B1C;
+  font-weight: 700;
+}
+
+.heroHeadline {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -2px;
+  color: var(--text-black);
+  margin-bottom: 24px;
+}
+
+.heroHighlight {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.heroHighlight::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: 6px;
+  height: 34%;
+  background: var(--primary-yellow);
+  z-index: -1;
+  border-radius: 6px;
+}
+
+.heroSubhead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 760px;
+  margin: 0 auto 36px;
+}
+
+.heroSubhead strong {
+  color: var(--text-black);
+  font-weight: 700;
+}
+
+.heroActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.btnPrimaryLg {
+  background: var(--accent-black);
+  color: #FFFFFF;
+  border: none;
+  padding: 14px 30px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   transition: all 0.15s ease-in-out;
 }
 
-.btnYellow:hover {
-  background: var(--primary-yellow-hover);
+.btnPrimaryLg:hover {
+  background: var(--accent-black-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.btnIcon {
+  font-size: 16px;
+  transition: transform 0.15s ease-in-out;
+}
+
+.btnPrimaryLg:hover .btnIcon {
+  transform: translateX(4px);
+}
+
+.btnSecondaryLg {
+  background: #FFFFFF;
+  color: var(--text-black);
+  border: 1px solid var(--border-card);
+  padding: 14px 26px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease-in-out;
+}
+
+.btnSecondaryLg:hover {
+  background: #FAF7F0;
+  border-color: #D1C9B8;
   transform: translateY(-1px);
 }
 
-/* Hero Split */
-.heroSplit {
-  display: grid;
-  grid-template-columns: 1fr 1.05fr;
-  gap: 48px;
-  align-items: center;
-  margin-bottom: 64px;
-}
-
-@media (max-width: 960px) {
-  .heroSplit {
-    grid-template-columns: 1fr;
-  }
-}
-
-.eyebrow {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
+.btnArrowDown {
+  font-size: 14px;
   color: #B48B1C;
-  text-transform: uppercase;
-  margin-bottom: 16px;
 }
 
-.heroHeading {
-  font-size: 48px;
+/* Tech Strip Credibility Ribbon */
+.techStrip {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 24px;
+}
+
+.techStripLabel {
+  display: block;
+  font-size: 10.5px;
   font-weight: 800;
-  line-height: 1.12;
-  letter-spacing: -1.8px;
-  color: var(--text-black);
-  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+  color: var(--text-light);
+  margin-bottom: 14px;
+  text-transform: uppercase;
 }
 
-.heroDescription {
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text-muted);
-  margin-bottom: 28px;
-}
-
-.ctaGroup {
+.techPills {
   display: flex;
-  gap: 14px;
-  align-items: center;
+  justify-content: center;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
-/* Browser Mockup on Hero */
-.mockupWrapper {
-  position: relative;
+.techPill {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ECE6D8;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
 }
 
-.browserCard {
+/* ==========================================================================
+   3. Databricks-Style Product Canvas / Feature Showcase
+   ========================================================================== */
+.showcaseSection {
+  margin-bottom: 80px;
+}
+
+.canvasHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.canvasTabs {
+  display: inline-flex;
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  padding: 6px;
+  border-radius: var(--radius-pill);
+  gap: 6px;
+  box-shadow: var(--shadow-sm);
+}
+
+.canvasTab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.canvasTab:hover {
+  color: var(--text-black);
+}
+
+.canvasTabActive {
+  background: var(--accent-black);
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tabIcon {
+  font-size: 14px;
+}
+
+.canvasFrame {
   background: #FFFFFF;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-lg);
@@ -157,16 +416,16 @@
   overflow: hidden;
 }
 
-.browserHeader {
+.canvasTopbar {
   display: flex;
   align-items: center;
-  padding: 12px 18px;
-  background: #FBF9F5;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #FAF8F4;
   border-bottom: 1px solid var(--border-subtle);
-  gap: 16px;
 }
 
-.browserDots {
+.canvasDots {
   display: flex;
   gap: 6px;
 }
@@ -177,12 +436,14 @@
   border-radius: 50%;
   background: #FF5F56;
 }
+
 .dotYellow {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background: #FFBD2E;
 }
+
 .dotGreen {
   width: 10px;
   height: 10px;
@@ -190,406 +451,597 @@
   background: #27C93F;
 }
 
-.browserUrl {
-  flex: 1;
-  max-width: 280px;
-  margin: 0 auto;
-  background: #FFFFFF;
-  border: 1px solid #ECE7DC;
-  border-radius: var(--radius-pill);
-  padding: 4px 12px;
-  font-size: 11px;
-  color: var(--text-muted);
-  text-align: center;
-  font-family: inherit;
-  display: flex;
+.canvasUrl {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid #ECE6D8;
+  padding: 4px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 11.5px;
+  color: var(--text-muted);
 }
 
-.browserBody {
-  padding: 20px 22px;
+.urlLock {
+  font-size: 10px;
 }
 
-.bodyTop {
+.canvasLiveBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #065F46;
+  background: var(--emerald-bg);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--emerald-border);
+}
+
+.livePulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+}
+
+.canvasContent {
+  padding: 24px 28px 28px;
+}
+
+.canvasSubHeader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
+  align-items: flex-end;
   border-bottom: 1px solid #F3EFE6;
-  padding-bottom: 12px;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
 }
 
-.matchCount {
-  font-size: 13px;
+.canvasTitle {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: var(--text-black);
+  margin-bottom: 4px;
+}
+
+.canvasMeta {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.miniBtn {
+  font-size: 12px;
   font-weight: 700;
   color: var(--text-black);
-}
-
-.matchCount span {
-  color: var(--text-muted);
-  font-weight: 500;
-}
-
-.floatingBadgeTop {
-  position: absolute;
-  top: -14px;
-  right: 24px;
-  background: var(--accent-black);
-  color: #FFFFFF;
+  text-decoration: none;
+  background: #FAF7F0;
+  border: 1px solid #E6DEC8;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  font-size: 11px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 10;
+  transition: all 0.15s;
 }
 
-.floatingCardBottom {
-  position: absolute;
-  bottom: -20px;
-  left: -16px;
-  background: #FFFFFF;
-  border: 1px solid var(--border-card);
-  padding: 12px 18px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+.miniBtn:hover {
+  background: #F4EEDC;
+}
+
+.canvasBadgePill {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #92400E;
+  background: var(--amber-bg);
+  border: 1px solid var(--amber-border);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.aucBadge {
   font-size: 12px;
-  z-index: 10;
+  color: var(--text-black);
+  background: #FAF7F0;
+  border: 1px solid #E6DEC8;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+}
+
+/* Candidate Table Tab 1 */
+.candidateTable {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 10px;
 }
 
-/* Candidate Items */
-.candidateItem {
-  display: flex;
+.candidateRow {
+  display: grid;
+  grid-template-columns: 50px 1.4fr 1.1fr 120px 80px;
   align-items: center;
-  justify-content: space-between;
-  padding: 12px 16px;
-  border: 1px solid #F0ECE1;
-  border-radius: var(--radius-md);
-  margin-bottom: 9px;
+  padding: 12px 18px;
   background: #FFFFFF;
+  border: 1px solid #F0EAE0;
+  border-radius: var(--radius-md);
   transition: all 0.15s ease-in-out;
 }
 
-.candidateItem:hover {
-  background: #FAF8F3;
+.candidateRow:hover {
+  background: #FAF8F4;
   border-color: #DCD4C4;
 }
 
-.candidateLeft {
+.rankCol {
+  font-size: 15px;
+  font-weight: 800;
+  color: #B48B1C;
+}
+
+.nameCol {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
 .candidateAvatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 9px;
-  background: #F3EFE6;
-  border: 1px solid #E8E2D4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  font-weight: 800;
-  color: var(--text-dark);
-}
-
-.candidateTitle {
-  font-size: 13.5px;
-  font-weight: 700;
-  color: var(--text-black);
-}
-
-.candidateMeta {
-  font-size: 11.5px;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 1px;
-}
-
-.candidateScoreCircle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #F4EFE6;
+  border: 1px solid #E4DCD0;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   font-weight: 800;
-  border: 2px solid;
-}
-
-.scoreHigh {
-  border-color: var(--emerald);
-  color: #065F46;
-  background: var(--emerald-bg);
-}
-
-.scoreMid {
-  border-color: var(--amber);
-  color: #92400E;
-  background: var(--amber-bg);
-}
-
-/* Proof Bar */
-.proofBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 28px 0;
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
-  margin-bottom: 64px;
-}
-
-.proofItem {
-  text-align: center;
-}
-
-.proofNumber {
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: -1px;
   color: var(--text-black);
 }
 
-.proofLabel {
+.candidateName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-black);
+}
+
+.candidateDomainTag {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.domainConf {
+  color: #10B981;
+  font-weight: 600;
   font-size: 11px;
+}
+
+.featuresCol {
+  display: flex;
+  gap: 8px;
+}
+
+.featurePill {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text-dark);
+  background: #F7F4EE;
+  border: 1px solid #EAE3D5;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.decisionCol {
+  text-align: center;
+}
+
+.decisionBadge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.badgeShortlist {
+  background: var(--emerald-bg);
+  color: #065F46;
+  border: 1px solid var(--emerald-border);
+}
+
+.badgeReview {
+  background: var(--amber-bg);
+  color: #92400E;
+  border: 1px solid var(--amber-border);
+}
+
+.scoreCol {
+  text-align: right;
+}
+
+.scoreVal {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-black);
+}
+
+.scoreLabel {
+  font-size: 10px;
   font-weight: 700;
   color: var(--text-muted);
-  letter-spacing: 0.6px;
   text-transform: uppercase;
+}
+
+/* Projects View Tab 2 */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.projectCard {
+  background: #FAF8F4;
+  border: 1px solid #EAE4D6;
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.projectCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.projectName {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-black);
+}
+
+.projectCandidate {
+  display: block;
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.verifiedTag {
+  font-size: 10px;
+  font-weight: 800;
+  color: #065F46;
+  background: var(--emerald-bg);
+  border: 1px solid var(--emerald-border);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.projectDesc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.projectPills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.techTag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #92400E;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* 30k Decision Tab 3 */
+.decisionVectorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.vectorCard {
+  background: #FAF8F4;
+  border: 1px solid #ECE6D8;
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.vectorIcon {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.vectorTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vectorValue {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-black);
+  margin: 4px 0;
+}
+
+.vectorImpact {
+  font-size: 11px;
+  font-weight: 600;
+  color: #065F46;
+}
+
+.decisionSummaryBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #EAE3D2;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+}
+
+.summaryVerdict {
+  font-size: 14px;
+  color: var(--text-black);
+}
+
+.summaryProb {
+  font-size: 12.5px;
+  color: var(--text-muted);
   margin-top: 3px;
 }
 
-/* How It Works Section */
-.howSection {
-  margin-bottom: 64px;
+.btnLaunchMini {
+  font-size: 12.5px;
+  font-weight: 700;
+  background: var(--accent-black);
+  color: #FFFFFF;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: all 0.15s;
 }
 
-.sectionHeader {
+.btnLaunchMini:hover {
+  background: var(--accent-black-hover);
+}
+
+/* ==========================================================================
+   4. Databricks 4-Column Metric Ribbon
+   ========================================================================== */
+.benchmarkSection {
+  margin-bottom: 80px;
+}
+
+.benchmarkGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.benchmarkCard {
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
   text-align: center;
-  margin-bottom: 40px;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.benchmarkCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #D8CEB8;
+}
+
+.benchmarkNumber {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  color: var(--text-black);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.benchmarkLabel {
+  font-size: 13px;
+  font-weight: 800;
+  color: #B48B1C;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.benchmarkDetail {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   5. Databricks 3-Pillar Lakehouse Architecture Grid
+   ========================================================================== */
+.architectureSection {
+  margin-bottom: 80px;
+}
+
+.sectionHeaderCenter {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 44px;
 }
 
 .sectionEyebrow {
+  display: inline-block;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 1.5px;
   color: #B48B1C;
   text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 .sectionTitle {
   font-size: 36px;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: -1.2px;
   color: var(--text-black);
-  margin-top: 8px;
+  margin-bottom: 12px;
 }
 
-.stepsGrid {
+.sectionSubtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.pillarsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-@media (max-width: 850px) {
-  .stepsGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.stepCard {
+.pillarCard {
   background: #FFFFFF;
   border: 1px solid var(--border-card);
-  border-radius: 22px;
-  padding: 28px 24px;
-  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.04);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: var(--radius-lg);
+  padding: 32px 26px;
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  position: relative;
+  transition: all 0.2s ease-in-out;
 }
 
-.stepCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
-  border-color: #DDD4C4;
+.pillarCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: #D6CCA8;
 }
 
-.stepCardTop {
+.pillarTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 18px;
 }
 
-.stepNumberPill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--primary-yellow-light);
-  border: 1px solid #FFE6A3;
-  color: #92400E;
-  font-size: 11.5px;
+.pillarTag {
+  font-size: 11px;
   font-weight: 800;
-  padding: 4px 12px;
+  color: #92400E;
+  background: var(--primary-yellow-light);
+  border: 1px solid #FFE494;
+  padding: 4px 10px;
   border-radius: var(--radius-pill);
-  letter-spacing: 0.5px;
 }
 
-.stepIconBadge {
-  font-size: 20px;
+.pillarModel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
 }
 
-.miniPreviewBox {
-  background: #FAF8F5;
-  border: 1px solid #ECE6D8;
-  border-radius: 12px;
-  padding: 12px 14px;
-  margin-top: 18px;
-  margin-bottom: 14px;
+.pillarTitle {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+  color: var(--text-black);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.pillarText {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.pillarSpecs {
+  margin-top: auto;
+  border-top: 1px solid #F4EFE6;
+  padding-top: 16px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
-.miniPreviewHeader {
+.specItem {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* ==========================================================================
+   6. Modernised "How TalentAI Works" Step-by-Step Workflow
+   ========================================================================== */
+.howSection {
+  margin-bottom: 80px;
+}
+
+.modernStepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.modernStepCard {
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+}
+
+.modernStepCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #D1C7AE;
+}
+
+.stepTopRow {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 16px;
 }
 
-.miniPreviewTitle {
+.stepPill {
   font-size: 11.5px;
   font-weight: 800;
-  color: var(--text-black);
-}
-
-.miniPreviewBadge {
-  background: #FEF3C7;
   color: #92400E;
-  border: 1px solid #FDE68A;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 7px;
+  background: var(--primary-yellow-light);
+  border: 1px solid #FFE494;
+  padding: 4px 12px;
   border-radius: var(--radius-pill);
 }
 
-.miniPreviewTag {
-  background: #F3F4F6;
-  color: #4B5563;
-  font-size: 10px;
-  font-weight: 600;
-  padding: 2px 7px;
-  border-radius: var(--radius-pill);
-}
-
-.miniPillsRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-
-.miniPill {
-  background: #FFFFFF;
-  border: 1px solid #DFD8CA;
-  font-size: 10px;
-  font-weight: 600;
-  color: #374151;
-  padding: 2px 7px;
-  border-radius: var(--radius-pill);
-}
-
-.miniStatGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  background: #FFFFFF;
-  border: 1px solid #EAE4D6;
-  border-radius: 8px;
-  padding: 8px;
-}
-
-.miniStatItem {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.miniStatLabel {
-  font-size: 9px;
-  color: var(--text-muted);
+.stepLatency {
+  font-size: 11px;
   font-weight: 700;
-  text-transform: uppercase;
-}
-
-.miniStatVal {
-  font-size: 11.5px;
-  font-weight: 800;
-  color: var(--text-black);
-  margin-top: 1px;
-}
-
-.miniDecisionBadge {
-  background: #DCFCE7;
-  color: #15803D;
-  border: 1px solid #BBF7D0;
-  font-size: 10.5px;
-  font-weight: 700;
+  color: #10B981;
+  background: var(--emerald-bg);
+  border: 1px solid var(--emerald-border);
   padding: 2px 8px;
   border-radius: var(--radius-pill);
 }
 
-.miniBarContainer {
-  width: 100%;
-  height: 6px;
-  background: #E5E7EB;
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.miniBarFill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary-yellow), #10B981);
-  border-radius: 999px;
-}
-
-.miniFooterText {
-  display: flex;
-  justify-content: space-between;
-  font-size: 10.5px;
-  color: var(--text-muted);
-}
-
-.stepNumber {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: var(--primary-yellow-light);
-  border: 1px solid #FFE6A3;
-  color: #92400E;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.stepTitle {
+.modernStepTitle {
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.4px;
@@ -597,53 +1049,437 @@
   margin-bottom: 10px;
 }
 
-.stepText {
+.modernStepText {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+/* Micro-Mockup inside Step Cards */
+.microMockup {
+  background: #FAF8F4;
+  border: 1px solid #ECE6D8;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  margin-bottom: 18px;
+}
+
+.microHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.microDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary-yellow);
+}
+
+.microRole {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-black);
+}
+
+.microTags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.tagYellow {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #92400E;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  padding: 2px 7px;
+  border-radius: 5px;
+}
+
+.microDocRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.docIcon {
+  font-size: 14px;
+}
+
+.docName {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-black);
+}
+
+.docStatus {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #10B981;
+}
+
+.microExtracted {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.microScoreRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.microScoreNum {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-black);
+}
+
+.microScoreLabel {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.microBadgeShortlist {
+  font-size: 11px;
+  font-weight: 800;
+  color: #065F46;
+  background: var(--emerald-bg);
+  border: 1px solid var(--emerald-border);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.modernStepFooter {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #F3EFE6;
+  font-size: 11px;
+  font-weight: 700;
+  color: #6B7280;
+}
+
+/* ==========================================================================
+   7. Enterprise Comparison Table
+   ========================================================================== */
+.comparisonSection {
+  margin-bottom: 80px;
+}
+
+.tableCard {
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.compTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.compTable thead tr {
+  background: #FAF8F4;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.compTable th {
+  padding: 16px 22px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.tableHeadFeature {
+  width: 32%;
+}
+
+.tableHeadLegacy {
+  width: 34%;
+}
+
+.tableHeadTalent {
+  width: 34%;
+  color: #B48B1C !important;
+}
+
+.compTable tbody tr {
+  border-bottom: 1px solid #F4EFE6;
+  transition: background 0.12s ease-in-out;
+}
+
+.compTable tbody tr:hover {
+  background: #FAF8F4;
+}
+
+.compTable td {
+  padding: 16px 22px;
   font-size: 13.5px;
+}
+
+.cellFeature {
+  font-weight: 700;
+  color: var(--text-black);
+}
+
+.cellLegacy {
+  color: #6B7280;
+}
+
+.cellTalent {
+  font-weight: 700;
+  color: #065F46;
+}
+
+/* ==========================================================================
+   8. Databricks-Inspired Obsidian CTA Banner
+   ========================================================================== */
+.ctaBanner {
+  background: #111111;
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 60px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 60px;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+.ctaGlow {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(255, 200, 59, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.ctaBadge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: var(--primary-yellow);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.ctaHeading {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+}
+
+.ctaSubtext {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #9CA3AF;
+  margin-bottom: 32px;
+}
+
+.ctaButtonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btnLaunchYellow {
+  background: var(--primary-yellow);
+  color: var(--text-black);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 13px 28px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 14px rgba(255, 200, 59, 0.35);
+  transition: all 0.15s ease-in-out;
+}
+
+.btnLaunchYellow:hover {
+  background: var(--primary-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 200, 59, 0.45);
+}
+
+.btnOutlineWhite {
+  background: transparent;
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 13px 24px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.15s ease-in-out;
+}
+
+.btnOutlineWhite:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+/* ==========================================================================
+   9. Enterprise Academic Footer
+   ========================================================================== */
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 48px;
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footerColBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerTagline {
+  font-size: 13px;
   line-height: 1.6;
   color: var(--text-muted);
 }
 
-.stepBadge {
-  margin-top: auto;
-  padding-top: 18px;
-  font-size: 11px;
-  font-weight: 700;
-  color: #6B7280;
+.footerCol {
   display: flex;
-  align-items: center;
-  gap: 6px;
+  flex-direction: column;
+  gap: 9px;
 }
 
-/* Bottom CTA Banner */
-.ctaBanner {
-  background: var(--accent-black);
-  color: #FFFFFF;
-  border-radius: var(--radius-xl);
-  padding: 48px 40px;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.ctaHeading {
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: -0.8px;
-  margin-bottom: 12px;
-}
-
-.ctaSubtext {
-  font-size: 15px;
-  color: #9CA3AF;
-  max-width: 520px;
-  margin: 0 auto 24px;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
+.footerTitle {
   font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: var(--text-black);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.footerLink {
+  font-size: 13px;
   color: var(--text-muted);
-  line-height: 1.8;
-  border-top: 1px solid var(--border-subtle);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footerLink:hover {
+  color: var(--text-black);
+}
+
+.footerText {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.footerBottom {
+  border-top: 1px solid #F0ECE1;
   padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-light);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footerSub {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   10. Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .benchmarkGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillarsGrid,
+  .modernStepsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .candidateRow {
+    grid-template-columns: 40px 1fr 1fr 100px 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroHeadline {
+    font-size: 40px;
+    letter-spacing: -1.2px;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .decisionVectorGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .candidateRow {
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+  }
+
+  .featuresCol,
+  .rankCol {
+    display: none;
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
