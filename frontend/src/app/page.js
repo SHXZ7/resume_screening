@@ -376,70 +376,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Databricks 3-Pillar Enterprise Architecture Grid */}
-      <section id="architecture" className={styles.architectureSection}>
-        <div className={styles.sectionHeaderCenter}>
-          <span className={styles.sectionEyebrow}>UNIFIED ML PLATFORM</span>
-          <h2 className={styles.sectionTitle}>Built Like an Enterprise Lakehouse</h2>
-          <p className={styles.sectionSubtitle}>
-            Three specialized machine learning and language layers coordinated in an asynchronous pipeline.
-          </p>
-        </div>
-
-        <div className={styles.pillarsGrid}>
-          {/* Pillar 1 */}
-          <div className={styles.pillarCard}>
-            <div className={styles.pillarTop}>
-              <span className={styles.pillarTag}>PILLAR 01</span>
-              <span className={styles.pillarModel}>Sublinear TF-IDF + Logistic</span>
-            </div>
-            <h3 className={styles.pillarTitle}>Modern NLP & Domain Categorization</h3>
-            <p className={styles.pillarText}>
-              Vectorizes resumes using 6,000 sublinear bigrams and predicts candidates across 30 modern engineering domains—from Full Stack and AI/ML to DevOps and Blockchain.
-            </p>
-            <div className={styles.pillarSpecs}>
-              <span className={styles.specItem}>✓ 30 Target Roles</span>
-              <span className={styles.specItem}>✓ 99.43% Accuracy</span>
-              <span className={styles.specItem}>✓ 114+ Skill Taxonomy</span>
-            </div>
-          </div>
-
-          {/* Pillar 2 */}
-          <div className={styles.pillarCard}>
-            <div className={styles.pillarTop}>
-              <span className={styles.pillarTag}>PILLAR 02</span>
-              <span className={styles.pillarModel}>Gradient Boosting (30k Candidates)</span>
-            </div>
-            <h3 className={styles.pillarTitle}>Multi-Feature Shortlisting Decision Engine</h3>
-            <p className={styles.pillarText}>
-              Moves beyond basic word matching. Extracts 6 quantitative features (experience, projects, education, length, git score) to predict shortlisting likelihood with 90.62% accuracy.
-            </p>
-            <div className={styles.pillarSpecs}>
-              <span className={styles.specItem}>✓ 30,000 Training Samples</span>
-              <span className={styles.specItem}>✓ 0.9665 ROC-AUC Score</span>
-              <span className={styles.specItem}>✓ Explainable Weights</span>
-            </div>
-          </div>
-
-          {/* Pillar 3 */}
-          <div className={styles.pillarCard}>
-            <div className={styles.pillarTop}>
-              <span className={styles.pillarTag}>PILLAR 03</span>
-              <span className={styles.pillarModel}>Groq LPU + Llama 3.3 Engine</span>
-            </div>
-            <h3 className={styles.pillarTitle}>Generative Recruiter Intelligence & Interview Guide</h3>
-            <p className={styles.pillarText}>
-              Automatically audits the candidate’s engineering projects, identifies real architecture strengths, and generates 3 tailored technical interview questions for hiring managers.
-            </p>
-            <div className={styles.pillarSpecs}>
-              <span className={styles.specItem}>✓ Real Project Audits</span>
-              <span className={styles.specItem}>✓ Executive Verdicts</span>
-              <span className={styles.specItem}>✓ Deep Interview Questions</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Modernised "How TalentAI Works" Workflow Section */}
       <section id="how-it-works" className={styles.howSection}>
         <div className={styles.sectionHeaderCenter}>
@@ -626,7 +562,6 @@ export default function HomePage() {
             <div className={styles.footerTitle}>Platform</div>
             <Link href="/dashboard" className={styles.footerLink}>Screener Dashboard</Link>
             <a href="#how-it-works" className={styles.footerLink}>How It Works</a>
-            <a href="#architecture" className={styles.footerLink}>Lakehouse Architecture</a>
             <a href="#benchmarks" className={styles.footerLink}>30k Benchmarks</a>
           </div>
           <div className={styles.footerCol}>
