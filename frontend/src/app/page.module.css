@@ -414,17 +414,164 @@
 .stepCard {
   background: #FFFFFF;
   border: 1px solid var(--border-card);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.15s, box-shadow 0.15s;
+  border-radius: 22px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .stepCard:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+  border-color: #DDD4C4;
+}
+
+.stepCardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.stepNumberPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary-yellow-light);
+  border: 1px solid #FFE6A3;
+  color: #92400E;
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.5px;
+}
+
+.stepIconBadge {
+  font-size: 20px;
+}
+
+.miniPreviewBox {
+  background: #FAF8F5;
+  border: 1px solid #ECE6D8;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-top: 18px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.miniPreviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.miniPreviewTitle {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--text-black);
+}
+
+.miniPreviewBadge {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+}
+
+.miniPreviewTag {
+  background: #F3F4F6;
+  color: #4B5563;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+}
+
+.miniPillsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.miniPill {
+  background: #FFFFFF;
+  border: 1px solid #DFD8CA;
+  font-size: 10px;
+  font-weight: 600;
+  color: #374151;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+}
+
+.miniStatGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid #EAE4D6;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.miniStatItem {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.miniStatLabel {
+  font-size: 9px;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.miniStatVal {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--text-black);
+  margin-top: 1px;
+}
+
+.miniDecisionBadge {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #BBF7D0;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+.miniBarContainer {
+  width: 100%;
+  height: 6px;
+  background: #E5E7EB;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.miniBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-yellow), #10B981);
+  border-radius: 999px;
+}
+
+.miniFooterText {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10.5px;
+  color: var(--text-muted);
 }
 
 .stepNumber {

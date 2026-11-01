@@ -148,64 +148,127 @@ export default function HomePage() {
       {/* Social Proof Stats Bar */}
       <div id="metrics" className={styles.proofBar}>
         <div className={styles.proofItem}>
-          <div className={styles.proofNumber}>962</div>
+          <div className={styles.proofNumber}>31,154+</div>
           <div className={styles.proofLabel}>Resumes Trained</div>
         </div>
         <div className={styles.proofItem}>
-          <div className={styles.proofNumber}>25</div>
-          <div className={styles.proofLabel}>Career Domains</div>
+          <div className={styles.proofNumber}>30</div>
+          <div className={styles.proofLabel}>Modern Engineering Domains</div>
         </div>
         <div className={styles.proofItem}>
-          <div className={styles.proofNumber}>99.5%</div>
-          <div className={styles.proofLabel}>Classifier Accuracy</div>
+          <div className={styles.proofNumber}>99.4%</div>
+          <div className={styles.proofLabel}>NLP Classifier Accuracy</div>
         </div>
         <div className={styles.proofItem}>
-          <div className={styles.proofNumber}>0.4s</div>
-          <div className={styles.proofLabel}>Ranking Speed</div>
+          <div className={styles.proofNumber}>0.2s</div>
+          <div className={styles.proofLabel}>Ranking & Decision Speed</div>
         </div>
       </div>
 
       {/* How It Works Section */}
       <section id="how-it-works" className={styles.howSection}>
         <div className={styles.sectionHeader}>
-          <span className={styles.sectionEyebrow}>STEP-BY-STEP WORKFLOW</span>
+          <span className={styles.sectionEyebrow}>AUTOMATED RECRUITMENT PIPELINE</span>
           <h2 className={styles.sectionTitle}>How TalentAI Works</h2>
+          <p style={{ fontSize: "14px", color: "var(--text-muted)", maxWidth: "520px", margin: "8px auto 0", lineHeight: 1.6 }}>
+            From unstructured documents to ranked, recruiter-verified engineering portfolios in three automated stages.
+          </p>
         </div>
 
         <div className={styles.stepsGrid}>
           {/* Step 1 */}
           <div className={styles.stepCard}>
-            <div className={styles.stepNumber}>01</div>
-            <h3 className={styles.stepTitle}>Define Role Requirements</h3>
+            <div className={styles.stepCardTop}>
+              <div className={styles.stepNumberPill}>STEP 01</div>
+              <span className={styles.stepIconBadge}>✨</span>
+            </div>
+            <h3 className={styles.stepTitle}>Target JD & AI Skill Extraction</h3>
             <p className={styles.stepText}>
-              Paste a job description or choose a pre-configured template. Our NLP engine tokenizes the text, strips stopwords, and extracts core skill requirements and domain competencies.
+              Type any role name or upload an existing Job Description. Groq LLM and our NLP engine dynamically structure requirements, extract core technical competencies, and allow instant keyword customization.
             </p>
+
+            <div className={styles.miniPreviewBox}>
+              <div className={styles.miniPreviewHeader}>
+                <span className={styles.miniPreviewTitle}>Full Stack Software Engineer</span>
+                <span className={styles.miniPreviewBadge}>✨ AI Enhanced</span>
+              </div>
+              <div className={styles.miniPillsRow}>
+                <span className={styles.miniPill}>✓ React</span>
+                <span className={styles.miniPill}>✓ Next.js</span>
+                <span className={styles.miniPill}>✓ FastAPI</span>
+                <span className={styles.miniPill}>✓ PostgreSQL</span>
+              </div>
+            </div>
+
             <div className={styles.stepBadge}>
-              <span>⚡</span> Tokenization & Regex Extraction
+              <span>✨</span> Groq LLM + 114+ Taxonomy
             </div>
           </div>
 
           {/* Step 2 */}
           <div className={styles.stepCard}>
-            <div className={styles.stepNumber}>02</div>
-            <h3 className={styles.stepTitle}>Multi-Format Parsing</h3>
+            <div className={styles.stepCardTop}>
+              <div className={styles.stepNumberPill}>STEP 02</div>
+              <span className={styles.stepIconBadge}>⚡</span>
+            </div>
+            <h3 className={styles.stepTitle}>Multi-Format & Project Parsing</h3>
             <p className={styles.stepText}>
-              Upload candidate resumes in batch (.pdf, .docx, or .txt). The system parses binary documents, strips formatting noise, and maps candidate abilities against our 114+ skill taxonomy.
+              Upload candidate resumes in batch (.pdf, .docx, or .txt). The system extracts work history, engineering project portfolios, GitHub activity scores, and multi-dimensional recruitment features.
             </p>
+
+            <div className={styles.miniPreviewBox}>
+              <div className={styles.miniPreviewHeader}>
+                <span className={styles.miniPreviewTitle}>📄 Shaaz_FullStack.pdf</span>
+                <span className={styles.miniPreviewTag}>Parsed in 0.2s</span>
+              </div>
+              <div className={styles.miniStatGrid}>
+                <div className={styles.miniStatItem}>
+                  <span className={styles.miniStatLabel}>Projects</span>
+                  <span className={styles.miniStatVal}>8 Detected</span>
+                </div>
+                <div className={styles.miniStatItem}>
+                  <span className={styles.miniStatLabel}>Experience</span>
+                  <span className={styles.miniStatVal}>2+ Years</span>
+                </div>
+                <div className={styles.miniStatItem}>
+                  <span className={styles.miniStatLabel}>GitHub Score</span>
+                  <span className={styles.miniStatVal}>500 pts</span>
+                </div>
+              </div>
+            </div>
+
             <div className={styles.stepBadge}>
-              <span>📂</span> pdfplumber, pypdf & docx Engine
+              <span>⚡</span> PyPDF, DOCX & Project Extractor
             </div>
           </div>
 
           {/* Step 3 */}
           <div className={styles.stepCard}>
-            <div className={styles.stepNumber}>03</div>
-            <h3 className={styles.stepTitle}>ML Matching & Ranking</h3>
+            <div className={styles.stepCardTop}>
+              <div className={styles.stepNumberPill}>STEP 03</div>
+              <span className={styles.stepIconBadge}>🏆</span>
+            </div>
+            <h3 className={styles.stepTitle}>Two-Stage ML Decision & Ranking</h3>
             <p className={styles.stepText}>
-              Computes TF-IDF vector representations and Cosine Similarity, while a Logistic Regression model predicts the candidate’s career domain with 99.5% accuracy to rank applicants from best to lowest fit.
+              Ranks applicants using 6,000-feature TF-IDF Cosine Similarity, modern 30-class domain prediction, and a 30,000-candidate Gradient Boosting shortlisting engine with interview probing questions.
             </p>
+
+            <div className={styles.miniPreviewBox}>
+              <div className={styles.miniPreviewHeader}>
+                <span className={styles.miniPreviewTitle}>#1 Candidate Fit</span>
+                <span className={styles.miniDecisionBadge}>✓ Shortlisted (92%)</span>
+              </div>
+              <div className={styles.miniBarContainer}>
+                <div className={styles.miniBarFill} style={{ width: "88%" }}></div>
+              </div>
+              <div className={styles.miniFooterText}>
+                <span>Cosine: <b>86.4%</b></span>
+                <span>Skills Match: <b>91.2%</b></span>
+              </div>
+            </div>
+
             <div className={styles.stepBadge}>
-              <span>🧠</span> TF-IDF + Cosine + Classifier
+              <span>🏆</span> Gradient Boosting (30k) + TF-IDF (99.4%)
             </div>
           </div>
         </div>
