@@ -1407,23 +1407,108 @@
   }
 
   .howSection {
-    margin-bottom: 56px;
+    margin-bottom: 40px;
   }
 
   .sectionHeaderCenter {
-    margin-bottom: 30px;
+    margin-bottom: 18px;
   }
 
   .sectionTitle {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 6px;
   }
 
   .sectionSubtitle {
-    font-size: 13.5px;
+    font-size: 12.5px;
+    line-height: 1.4;
+  }
+
+  .modernStepsGrid {
+    gap: 12px;
   }
 
   .modernStepCard {
-    padding: 20px 16px;
+    padding: 14px 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .stepTopRow {
+    margin-bottom: 8px;
+  }
+
+  .stepPill {
+    font-size: 10.5px;
+    padding: 2px 8px;
+  }
+
+  .stepLatency {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .modernStepTitle {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .modernStepText {
+    font-size: 12px;
+    line-height: 1.45;
+    margin-bottom: 10px;
+  }
+
+  .microMockup {
+    padding: 8px 10px;
+    margin-bottom: 0;
+    border-radius: 10px;
+  }
+
+  .microHeader {
+    margin-bottom: 4px;
+  }
+
+  .microRole {
+    font-size: 11px;
+  }
+
+  .tagYellow {
+    font-size: 9.5px;
+    padding: 2px 5px;
+  }
+
+  .microDocRow {
+    margin-bottom: 4px;
+  }
+
+  .docName {
+    font-size: 11px;
+  }
+
+  .docStatus {
+    font-size: 10px;
+  }
+
+  .microExtracted {
+    font-size: 10px;
+    gap: 4px;
+  }
+
+  .microScoreNum {
+    font-size: 17px;
+  }
+
+  .microScoreLabel {
+    font-size: 8.5px;
+  }
+
+  .microBadgeShortlist {
+    font-size: 10px;
+    padding: 2px 7px;
+  }
+
+  .modernStepFooter {
+    display: none;
   }
 
   .ctaBanner {
