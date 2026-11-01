@@ -1,6 +1,7 @@
 /* ==========================================================================
    Databricks-Inspired Enterprise Homepage CSS for TalentAI
-   Palette: Warm Cream (#FCFAF6), Warm Gold/Yellow (#FFC83B), Obsidian (#111111)
+   Fully Mobile-Optimized Responsive Design (320px - 1440px+)
+   Palette: Warm Cream (#FCFAF6), Warm Gold (#FFC83B), Obsidian (#111111)
    ========================================================================== */
 
 .container {
@@ -29,12 +30,6 @@
   z-index: 100;
 }
 
-.navLeft {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 .logo {
   display: flex;
   align-items: center;
@@ -56,73 +51,11 @@
   letter-spacing: -0.8px;
 }
 
-.logoBadge {
-  font-size: 9.5px;
-  font-weight: 800;
-  letter-spacing: 0.8px;
-  background: #111111;
-  color: #FFFFFF;
-  padding: 3px 7px;
-  border-radius: 6px;
-  margin-left: 4px;
-}
-
-.navDivider {
-  width: 1px;
-  height: 20px;
-  background: var(--border-card);
-}
-
-.navLinks {
-  display: flex;
-  gap: 22px;
-  align-items: center;
-}
-
-.navLink {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: color 0.15s ease-in-out;
-}
-
-.navLink:hover {
-  color: var(--text-black);
-}
-
-.navRight {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.gitLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--border-card);
-  background: #FFFFFF;
-  transition: all 0.15s ease-in-out;
-}
-
-.gitLink:hover {
-  color: var(--text-black);
-  border-color: #D1C9B8;
-  background: #FAF7F0;
-}
-
 .btnLaunch {
   background: var(--accent-black);
   color: #FFFFFF;
   border: none;
-  padding: 9px 20px;
+  padding: 9px 22px;
   border-radius: var(--radius-pill);
   font-size: 13px;
   font-weight: 700;
@@ -130,7 +63,6 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
   transition: all 0.15s ease-in-out;
 }
 
@@ -139,79 +71,14 @@
   transform: translateY(-1px);
 }
 
-.arrowIcon {
-  font-size: 14px;
-  transition: transform 0.15s ease-in-out;
-}
-
-.btnLaunch:hover .arrowIcon {
-  transform: translateX(3px);
-}
-
 /* ==========================================================================
-   2. Databricks Hero Section
+   2. Hero Section
    ========================================================================== */
 .heroSection {
   text-align: center;
   max-width: 980px;
   margin: 0 auto 64px;
   padding-top: 12px;
-}
-
-.announcementWrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.announcementBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #FFFFFF;
-  border: 1px solid #E6DEC8;
-  padding: 6px 18px;
-  border-radius: var(--radius-pill);
-  text-decoration: none;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-  transition: all 0.2s ease-in-out;
-}
-
-.announcementBadge:hover {
-  border-color: #B48B1C;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-.badgePulse {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #10B981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
-}
-
-.badgeTag {
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.8px;
-  color: #92400E;
-  background: var(--primary-yellow-light);
-  border: 1px solid #FDE68A;
-  padding: 2px 8px;
-  border-radius: var(--radius-pill);
-}
-
-.badgeText {
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--text-black);
-}
-
-.badgeArrow {
-  font-size: 13px;
-  color: #B48B1C;
-  font-weight: 700;
 }
 
 .heroHeadline {
@@ -295,34 +162,6 @@
   transform: translateX(4px);
 }
 
-.btnSecondaryLg {
-  background: #FFFFFF;
-  color: var(--text-black);
-  border: 1px solid var(--border-card);
-  padding: 14px 26px;
-  border-radius: var(--radius-pill);
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.15s ease-in-out;
-}
-
-.btnSecondaryLg:hover {
-  background: #FAF7F0;
-  border-color: #D1C9B8;
-  transform: translateY(-1px);
-}
-
-.btnArrowDown {
-  font-size: 14px;
-  color: #B48B1C;
-}
-
 /* Tech Strip Credibility Ribbon - Infinite Marquee Leftwards */
 .techStrip {
   border-top: 1px solid var(--border-subtle);
@@ -339,15 +178,15 @@
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 10%,
-    black 90%,
+    black 8%,
+    black 92%,
     transparent 100%
   );
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 10%,
-    black 90%,
+    black 8%,
+    black 92%,
     transparent 100%
   );
 }
@@ -397,7 +236,7 @@
 }
 
 /* ==========================================================================
-   3. Databricks-Style Product Canvas / Feature Showcase
+   3. Interactive Product Canvas / Feature Showcase
    ========================================================================== */
 .showcaseSection {
   margin-bottom: 80px;
@@ -417,6 +256,14 @@
   border-radius: var(--radius-pill);
   gap: 6px;
   box-shadow: var(--shadow-sm);
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.canvasTabs::-webkit-scrollbar {
+  display: none;
 }
 
 .canvasTab {
@@ -431,6 +278,8 @@
   font-weight: 700;
   color: var(--text-muted);
   cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: all 0.15s ease-in-out;
 }
 
@@ -463,11 +312,13 @@
   padding: 12px 20px;
   background: #FAF8F4;
   border-bottom: 1px solid var(--border-subtle);
+  gap: 12px;
 }
 
 .canvasDots {
   display: flex;
   gap: 6px;
+  flex-shrink: 0;
 }
 
 .dotRed {
@@ -501,6 +352,10 @@
   border-radius: var(--radius-pill);
   font-size: 11.5px;
   color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
 }
 
 .urlLock {
@@ -518,6 +373,8 @@
   padding: 3px 10px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--emerald-border);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .livePulse {
@@ -538,6 +395,7 @@
   border-bottom: 1px solid #F3EFE6;
   padding-bottom: 16px;
   margin-bottom: 20px;
+  gap: 12px;
 }
 
 .canvasTitle {
@@ -562,6 +420,8 @@
   border: 1px solid #E6DEC8;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: all 0.15s;
 }
 
@@ -577,6 +437,7 @@
   border: 1px solid var(--amber-border);
   padding: 4px 12px;
   border-radius: var(--radius-pill);
+  white-space: nowrap;
 }
 
 .aucBadge {
@@ -586,6 +447,7 @@
   border: 1px solid #E6DEC8;
   padding: 5px 12px;
   border-radius: var(--radius-pill);
+  white-space: nowrap;
 }
 
 /* Candidate Table Tab 1 */
@@ -621,6 +483,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
 }
 
 .candidateAvatar {
@@ -635,12 +498,16 @@
   font-size: 14px;
   font-weight: 800;
   color: var(--text-black);
+  flex-shrink: 0;
 }
 
 .candidateName {
   font-size: 14px;
   font-weight: 700;
   color: var(--text-black);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .candidateDomainTag {
@@ -661,6 +528,7 @@
 .featuresCol {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .featurePill {
@@ -671,6 +539,7 @@
   border: 1px solid #EAE3D5;
   padding: 4px 10px;
   border-radius: var(--radius-pill);
+  white-space: nowrap;
 }
 
 .decisionCol {
@@ -683,6 +552,7 @@
   font-weight: 800;
   padding: 4px 12px;
   border-radius: var(--radius-pill);
+  white-space: nowrap;
 }
 
 .badgeShortlist {
@@ -733,6 +603,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 12px;
+  gap: 8px;
 }
 
 .projectName {
@@ -756,6 +627,8 @@
   border: 1px solid var(--emerald-border);
   padding: 2px 8px;
   border-radius: var(--radius-pill);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .projectDesc {
@@ -830,6 +703,7 @@
   border: 1px solid #EAE3D2;
   padding: 16px 20px;
   border-radius: var(--radius-md);
+  gap: 14px;
 }
 
 .summaryVerdict {
@@ -851,6 +725,8 @@
   padding: 8px 18px;
   border-radius: var(--radius-pill);
   text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: all 0.15s;
 }
 
@@ -859,7 +735,7 @@
 }
 
 /* ==========================================================================
-   4. Databricks 4-Column Metric Ribbon
+   4. 4-Column Metric Ribbon
    ========================================================================== */
 .benchmarkSection {
   margin-bottom: 80px;
@@ -911,9 +787,9 @@
 }
 
 /* ==========================================================================
-   5. Databricks 3-Pillar Lakehouse Architecture Grid
+   5. Modernised "How TalentAI Works" Step-by-Step Workflow
    ========================================================================== */
-.architectureSection {
+.howSection {
   margin-bottom: 80px;
 }
 
@@ -945,90 +821,6 @@
   font-size: 15px;
   color: var(--text-muted);
   line-height: 1.6;
-}
-
-.pillarsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.pillarCard {
-  background: #FFFFFF;
-  border: 1px solid var(--border-card);
-  border-radius: var(--radius-lg);
-  padding: 32px 26px;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  transition: all 0.2s ease-in-out;
-}
-
-.pillarCard:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: #D6CCA8;
-}
-
-.pillarTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 18px;
-}
-
-.pillarTag {
-  font-size: 11px;
-  font-weight: 800;
-  color: #92400E;
-  background: var(--primary-yellow-light);
-  border: 1px solid #FFE494;
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-}
-
-.pillarModel {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--text-muted);
-}
-
-.pillarTitle {
-  font-size: 19px;
-  font-weight: 800;
-  letter-spacing: -0.4px;
-  color: var(--text-black);
-  margin-bottom: 12px;
-  line-height: 1.3;
-}
-
-.pillarText {
-  font-size: 13.5px;
-  line-height: 1.65;
-  color: var(--text-muted);
-  margin-bottom: 24px;
-}
-
-.pillarSpecs {
-  margin-top: auto;
-  border-top: 1px solid #F4EFE6;
-  padding-top: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.specItem {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text-dark);
-}
-
-/* ==========================================================================
-   6. Modernised "How TalentAI Works" Step-by-Step Workflow
-   ========================================================================== */
-.howSection {
-  margin-bottom: 80px;
 }
 
 .modernStepsGrid {
@@ -1170,6 +962,7 @@
   gap: 6px;
   font-size: 11px;
   color: var(--text-muted);
+  flex-wrap: wrap;
 }
 
 .microScoreRow {
@@ -1211,83 +1004,7 @@
 }
 
 /* ==========================================================================
-   7. Enterprise Comparison Table
-   ========================================================================== */
-.comparisonSection {
-  margin-bottom: 80px;
-}
-
-.tableCard {
-  background: #FFFFFF;
-  border: 1px solid var(--border-card);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-}
-
-.compTable {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-.compTable thead tr {
-  background: #FAF8F4;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.compTable th {
-  padding: 16px 22px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.tableHeadFeature {
-  width: 32%;
-}
-
-.tableHeadLegacy {
-  width: 34%;
-}
-
-.tableHeadTalent {
-  width: 34%;
-  color: #B48B1C !important;
-}
-
-.compTable tbody tr {
-  border-bottom: 1px solid #F4EFE6;
-  transition: background 0.12s ease-in-out;
-}
-
-.compTable tbody tr:hover {
-  background: #FAF8F4;
-}
-
-.compTable td {
-  padding: 16px 22px;
-  font-size: 13.5px;
-}
-
-.cellFeature {
-  font-weight: 700;
-  color: var(--text-black);
-}
-
-.cellLegacy {
-  color: #6B7280;
-}
-
-.cellTalent {
-  font-weight: 700;
-  color: #065F46;
-}
-
-/* ==========================================================================
-   8. CTA Banner (Light Warm Palette)
+   6. CTA Banner (Light Warm Palette)
    ========================================================================== */
 .ctaBanner {
   background: #FFFFFF;
@@ -1393,7 +1110,7 @@
 }
 
 /* ==========================================================================
-   9. Enterprise Academic Footer
+   7. Enterprise Academic Footer
    ========================================================================== */
 .footer {
   border-top: 1px solid var(--border-subtle);
@@ -1468,48 +1185,140 @@
 }
 
 /* ==========================================================================
-   10. Responsive Breakpoints
+   8. Responsive Breakpoints - Mobile Optimization
    ========================================================================== */
 @media (max-width: 1024px) {
   .benchmarkGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pillarsGrid,
   .modernStepsGrid {
     grid-template-columns: 1fr;
   }
 
   .footerTop {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr 1fr;
   }
 
   .candidateRow {
-    grid-template-columns: 40px 1fr 1fr 100px 70px;
+    grid-template-columns: 40px 1.4fr 1fr 100px 70px;
+    padding: 12px 14px;
   }
 }
 
 @media (max-width: 768px) {
-  .heroHeadline {
-    font-size: 40px;
-    letter-spacing: -1.2px;
+  .container {
+    padding: 12px 16px 60px;
   }
 
-  .navLinks {
+  .nav {
+    padding: 10px 16px;
+    margin-bottom: 36px;
+    top: 10px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .btnLaunch {
+    padding: 7px 16px;
+    font-size: 12px;
+  }
+
+  .heroSection {
+    margin-bottom: 48px;
+    padding-top: 4px;
+  }
+
+  .heroHeadline {
+    font-size: 36px;
+    letter-spacing: -1.2px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .heroHeadline br {
     display: none;
   }
 
-  .projectsGrid {
-    grid-template-columns: 1fr;
+  .heroSubhead {
+    font-size: 15px;
+    line-height: 1.55;
+    margin-bottom: 24px;
   }
 
-  .decisionVectorGrid {
-    grid-template-columns: 1fr 1fr;
+  .heroActions {
+    margin-bottom: 32px;
+  }
+
+  .btnPrimaryLg {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 14px;
+  }
+
+  .showcaseSection {
+    margin-bottom: 56px;
+  }
+
+  .canvasTabs {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 4px;
+    border-radius: 14px;
+  }
+
+  .canvasTab {
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+
+  .canvasTopbar {
+    padding: 10px 14px;
+  }
+
+  .canvasUrl {
+    font-size: 10.5px;
+    padding: 3px 10px;
+    max-width: 160px;
+  }
+
+  .canvasLiveBadge {
+    font-size: 10px;
+    padding: 2px 7px;
+  }
+
+  .canvasContent {
+    padding: 16px 14px 18px;
+  }
+
+  .canvasSubHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+  }
+
+  .canvasTitle {
+    font-size: 15px;
+  }
+
+  .canvasMeta {
+    font-size: 11.5px;
+  }
+
+  .miniBtn {
+    font-size: 11.5px;
+    padding: 5px 12px;
   }
 
   .candidateRow {
     grid-template-columns: 1fr auto;
     gap: 8px;
+    padding: 10px 12px;
   }
 
   .featuresCol,
@@ -1517,8 +1326,176 @@
     display: none;
   }
 
+  .candidateAvatar {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .candidateName {
+    font-size: 13px;
+  }
+
+  .candidateDomainTag {
+    font-size: 11px;
+    flex-wrap: wrap;
+  }
+
+  .decisionBadge {
+    font-size: 10px;
+    padding: 3px 9px;
+  }
+
+  .scoreVal {
+    font-size: 15px;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .projectCard {
+    padding: 14px;
+  }
+
+  .projectName {
+    font-size: 14px;
+  }
+
+  .projectDesc {
+    font-size: 12px;
+  }
+
+  .decisionVectorGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .vectorCard {
+    padding: 12px;
+  }
+
+  .vectorValue {
+    font-size: 15px;
+  }
+
+  .decisionSummaryBox {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .btnLaunchMini {
+    width: 100%;
+    text-align: center;
+    padding: 9px;
+  }
+
+  .benchmarkSection {
+    margin-bottom: 56px;
+  }
+
+  .benchmarkCard {
+    padding: 20px 14px;
+  }
+
+  .benchmarkNumber {
+    font-size: 30px;
+  }
+
+  .howSection {
+    margin-bottom: 56px;
+  }
+
+  .sectionHeaderCenter {
+    margin-bottom: 30px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .sectionSubtitle {
+    font-size: 13.5px;
+  }
+
+  .modernStepCard {
+    padding: 20px 16px;
+  }
+
+  .ctaBanner {
+    padding: 36px 18px;
+    margin-bottom: 48px;
+    border-radius: var(--radius-lg);
+  }
+
+  .ctaHeading {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .ctaSubtext {
+    font-size: 13.5px;
+    margin-bottom: 24px;
+  }
+
+  .ctaButtonGroup {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .btnLaunchYellow,
+  .btnOutlineWhite {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    font-size: 13.5px;
+  }
+
   .footerTop {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroHeadline {
+    font-size: 30px;
+    letter-spacing: -0.8px;
+  }
+
+  .heroSubhead {
+    font-size: 13.5px;
+  }
+
+  .canvasUrl {
+    display: none;
+  }
+
+  .decisionVectorGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benchmarkGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .ctaHeading {
+    font-size: 22px;
   }
 }
