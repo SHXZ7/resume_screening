@@ -126,22 +126,19 @@
   gap: 24px;
   margin-bottom: 32px;
   width: 100%;
-  align-items: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
 }
 
 .inputsParallelGrid > .panelCard {
   flex: 1 1 0;
   min-width: 0;
-}
-
-@media (max-width: 700px) {
-  .inputsParallelGrid {
-    flex-direction: column;
-  }
+  box-sizing: border-box;
 }
 
 .resultsSectionFullWidth {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .panelCard {
@@ -152,6 +149,8 @@
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .cardHeader {
@@ -159,6 +158,12 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
+}
+
+.cardHeaderActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
 .cardTitle {
@@ -197,6 +202,7 @@
 
 .textarea {
   width: 100%;
+  box-sizing: border-box;
   height: 160px;
   background: var(--bg-main);
   border: 1px solid var(--border-subtle);
@@ -610,6 +616,8 @@
   text-align: center;
   cursor: pointer;
   transition: all 0.15s;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .dropzone:hover {
@@ -628,6 +636,18 @@
   justify-content: center;
   margin: 0 auto 8px;
   font-size: 16px;
+}
+
+.dropzoneTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-black);
+}
+
+.dropzoneSubtitle {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 2px;
 }
 
 .fileChips {
@@ -733,6 +753,8 @@
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
+  flex: 1;
 }
 
 .candidateAvatar {
@@ -746,6 +768,26 @@
   justify-content: center;
   font-size: 14px;
   font-weight: 800;
+  flex-shrink: 0;
+}
+
+.candidateBody {
+  min-width: 0;
+  flex: 1;
+}
+
+.candidateTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.candidateName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-black);
+  word-break: break-word;
 }
 
 .candidateTitle {
@@ -1114,4 +1156,288 @@
   font-weight: 800;
   color: var(--text-black);
   margin-top: 2px;
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE STYLES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px 14px 48px;
+  }
+
+  .topbar {
+    padding: 10px 14px;
+    margin-bottom: 16px;
+  }
+
+  .inputsParallelGrid {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .inputsParallelGrid > .panelCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none;
+    box-sizing: border-box;
+  }
+
+  .panelCard {
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 18px 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .cardHeaderActions {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .uploadJdBtn,
+  .enhanceJdBtn {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 11.5px;
+    white-space: nowrap;
+  }
+
+  .textarea {
+    height: 120px;
+    padding: 10px 12px;
+    font-size: 12.5px;
+  }
+
+  .roleBanner {
+    padding: 10px 12px;
+    margin-top: 10px;
+  }
+
+  .roleTitleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .dropzone {
+    padding: 18px 12px;
+  }
+
+  .dropzoneIcon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .dropzoneTitle {
+    font-size: 12.5px;
+  }
+
+  .dropzoneSubtitle {
+    font-size: 10.5px;
+  }
+
+  .fileChips {
+    max-height: 140px;
+  }
+
+  .fileChip {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .btnBlack {
+    padding: 13px 16px;
+    font-size: 14.5px;
+  }
+
+  .resultsCard {
+    padding: 16px 14px;
+    border-radius: var(--radius-md);
+    min-height: unset;
+  }
+
+  .resultsHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+  }
+
+  .searchInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .candidateItem {
+    padding: 12px 10px;
+    gap: 10px;
+  }
+
+  .candidateLeft {
+    gap: 10px;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .candidateAvatar {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .candidateMeta {
+    font-size: 10.5px;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .scoreCircle {
+    width: 40px;
+    height: 40px;
+    font-size: 13.5px;
+    flex-shrink: 0;
+  }
+
+  /* Candidate Profile Modal on Mobile */
+  .modalBackdrop {
+    padding: 8px;
+  }
+
+  .modalBox {
+    padding: 16px 14px;
+    max-height: 92vh;
+    border-radius: 16px;
+  }
+
+  .modalHeader {
+    margin-bottom: 12px;
+  }
+
+  .modalTabs {
+    margin-bottom: 12px;
+    gap: 3px;
+    padding: 3px;
+  }
+
+  .modalTab {
+    padding: 6px 4px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .modalMetricsRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+  }
+
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+  }
+
+  .projectCard,
+  .experienceCard {
+    padding: 10px 12px;
+  }
+
+  .editModalBox {
+    padding: 16px 14px;
+    max-height: 92vh;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px 10px 40px;
+  }
+
+  .inputsParallelGrid {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .inputsParallelGrid > .panelCard {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .topbar {
+    padding: 8px 12px;
+    margin-bottom: 12px;
+  }
+
+  .panelCard {
+    width: 100% !important;
+    padding: 14px 12px;
+    box-sizing: border-box;
+  }
+
+  .cardTitle {
+    font-size: 14px;
+  }
+
+  .uploadJdBtn,
+  .enhanceJdBtn {
+    font-size: 11px;
+    padding: 7px 6px;
+  }
+
+  .textarea {
+    height: 110px;
+    font-size: 12px;
+  }
+
+  .candidateItem {
+    padding: 10px 8px;
+    gap: 8px;
+  }
+
+  .candidateAvatar {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .candidateName {
+    font-size: 12.5px;
+  }
+
+  .scoreCircle {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+  .modalTab {
+    font-size: 10px;
+    padding: 5px 2px;
+  }
 }

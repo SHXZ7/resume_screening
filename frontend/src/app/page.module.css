@@ -257,13 +257,6 @@
   gap: 6px;
   box-shadow: var(--shadow-sm);
   max-width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-
-.canvasTabs::-webkit-scrollbar {
-  display: none;
 }
 
 .canvasTab {
@@ -281,6 +274,14 @@
   white-space: nowrap;
   flex-shrink: 0;
   transition: all 0.15s ease-in-out;
+}
+
+.tabDesktopText {
+  display: inline;
+}
+
+.tabMobileText {
+  display: none;
 }
 
 .canvasTab:hover {
@@ -1208,12 +1209,12 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 12px 16px 60px;
+    padding: 12px 14px 60px;
   }
 
   .nav {
     padding: 10px 16px;
-    margin-bottom: 36px;
+    margin-bottom: 32px;
     top: 10px;
   }
 
@@ -1227,15 +1228,15 @@
   }
 
   .heroSection {
-    margin-bottom: 48px;
+    margin-bottom: 40px;
     padding-top: 4px;
   }
 
   .heroHeadline {
-    font-size: 36px;
-    letter-spacing: -1.2px;
+    font-size: 34px;
+    letter-spacing: -1px;
     line-height: 1.15;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .heroHeadline br {
@@ -1243,82 +1244,124 @@
   }
 
   .heroSubhead {
-    font-size: 15px;
-    line-height: 1.55;
-    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 22px;
   }
 
   .heroActions {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
 
   .btnPrimaryLg {
     width: 100%;
     justify-content: center;
-    padding: 13px 20px;
+    padding: 12px 20px;
     font-size: 14px;
   }
 
+  /* Seamless 3-Segment Control for Canvas Tabs on Mobile */
   .showcaseSection {
-    margin-bottom: 56px;
+    margin-bottom: 48px;
+  }
+
+  .canvasHeader {
+    margin-bottom: 12px;
   }
 
   .canvasTabs {
     width: 100%;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding: 4px;
-    border-radius: 14px;
+    border-radius: var(--radius-pill);
+    gap: 4px;
+    background: #FFFFFF;
+    box-shadow: var(--shadow-sm);
   }
 
   .canvasTab {
-    padding: 7px 14px;
-    font-size: 12px;
+    width: 100%;
+    justify-content: center;
+    padding: 8px 4px;
+    font-size: 11.5px;
+    gap: 4px;
+    border-radius: var(--radius-pill);
+  }
+
+  .tabDesktopText {
+    display: none;
+  }
+
+  .tabMobileText {
+    display: inline;
+    font-weight: 700;
   }
 
   .canvasTopbar {
-    padding: 10px 14px;
+    padding: 9px 12px;
   }
 
   .canvasUrl {
-    font-size: 10.5px;
-    padding: 3px 10px;
-    max-width: 160px;
+    display: none;
   }
 
   .canvasLiveBadge {
-    font-size: 10px;
+    font-size: 9.5px;
     padding: 2px 7px;
   }
 
   .canvasContent {
-    padding: 16px 14px 18px;
+    padding: 14px 12px 16px;
   }
 
   .canvasSubHeader {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
-    padding-bottom: 12px;
-    margin-bottom: 14px;
+    gap: 6px;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .canvasTitle {
     font-size: 15px;
+    line-height: 1.25;
   }
 
   .canvasMeta {
-    font-size: 11.5px;
+    font-size: 11px;
+    line-height: 1.35;
   }
 
   .miniBtn {
-    font-size: 11.5px;
-    padding: 5px 12px;
+    font-size: 11px;
+    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 
+  .canvasBadgePill {
+    font-size: 10.5px;
+    padding: 4px 8px;
+    white-space: normal;
+    line-height: 1.35;
+    border-radius: 8px;
+    display: inline-block;
+  }
+
+  .aucBadge {
+    font-size: 10.5px;
+    padding: 3px 8px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  /* Mobile Candidate List */
   .candidateRow {
     grid-template-columns: 1fr auto;
     gap: 8px;
-    padding: 10px 12px;
+    padding: 10px 10px;
   }
 
   .featuresCol,
@@ -1326,86 +1369,182 @@
     display: none;
   }
 
+  .nameCol {
+    gap: 8px;
+    min-width: 0;
+  }
+
   .candidateAvatar {
-    width: 34px;
-    height: 34px;
-    font-size: 12px;
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+    border-radius: 7px;
   }
 
   .candidateName {
-    font-size: 13px;
+    font-size: 12.5px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .candidateDomainTag {
-    font-size: 11px;
+    font-size: 10px;
     flex-wrap: wrap;
+    gap: 2px;
   }
 
-  .decisionBadge {
-    font-size: 10px;
-    padding: 3px 9px;
+  .domainConf {
+    font-size: 9.5px;
+  }
+
+  .scoreCol {
+    text-align: right;
   }
 
   .scoreVal {
-    font-size: 15px;
+    font-size: 14.5px;
   }
 
+  .scoreLabel {
+    font-size: 8.5px;
+  }
+
+  .decisionBadge {
+    font-size: 9.5px;
+    padding: 2px 7px;
+  }
+
+  /* Mobile Projects View */
   .projectsGrid {
     grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .projectCard {
-    padding: 14px;
-  }
-
-  .projectName {
-    font-size: 14px;
-  }
-
-  .projectDesc {
-    font-size: 12px;
-  }
-
-  .decisionVectorGrid {
-    grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
 
+  .projectCard {
+    padding: 12px 10px;
+  }
+
+  .projectCardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+
+  .projectName {
+    font-size: 13.5px;
+    line-height: 1.3;
+  }
+
+  .projectCandidate {
+    font-size: 10.5px;
+  }
+
+  .verifiedTag {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  .projectDesc {
+    font-size: 11.5px;
+    line-height: 1.45;
+    margin-bottom: 8px;
+  }
+
+  .projectPills {
+    gap: 4px;
+  }
+
+  .techTag {
+    font-size: 9.5px;
+    padding: 2px 5px;
+  }
+
+  /* Mobile Decision Engine View */
+  .decisionVectorGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
   .vectorCard {
-    padding: 12px;
+    padding: 10px 8px;
+  }
+
+  .vectorIcon {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .vectorTitle {
+    font-size: 9.5px;
   }
 
   .vectorValue {
-    font-size: 15px;
+    font-size: 13.5px;
+    margin: 2px 0;
+  }
+
+  .vectorImpact {
+    font-size: 9.5px;
   }
 
   .decisionSummaryBox {
     flex-direction: column;
     align-items: stretch;
     text-align: center;
-    gap: 10px;
-    padding: 14px;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .summaryVerdict {
+    font-size: 12px;
+  }
+
+  .summaryProb {
+    font-size: 11px;
   }
 
   .btnLaunchMini {
     width: 100%;
     text-align: center;
-    padding: 9px;
+    padding: 8px;
+    font-size: 11.5px;
   }
 
+  /* Mobile 2x2 Benchmark Grid */
   .benchmarkSection {
-    margin-bottom: 56px;
+    margin-bottom: 44px;
+  }
+
+  .benchmarkGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .benchmarkCard {
-    padding: 20px 14px;
+    padding: 16px 10px;
+    border-radius: var(--radius-md);
   }
 
   .benchmarkNumber {
-    font-size: 30px;
+    font-size: 26px;
+    margin-bottom: 4px;
   }
 
+  .benchmarkLabel {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .benchmarkDetail {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+  /* Mobile Streamlined How It Works */
   .howSection {
     margin-bottom: 40px;
   }
@@ -1511,20 +1650,21 @@
     display: none;
   }
 
+  /* Mobile CTA Banner */
   .ctaBanner {
-    padding: 36px 18px;
-    margin-bottom: 48px;
+    padding: 32px 16px;
+    margin-bottom: 44px;
     border-radius: var(--radius-lg);
   }
 
   .ctaHeading {
-    font-size: 26px;
+    font-size: 24px;
     margin-bottom: 10px;
   }
 
   .ctaSubtext {
-    font-size: 13.5px;
-    margin-bottom: 24px;
+    font-size: 13px;
+    margin-bottom: 20px;
   }
 
   .ctaButtonGroup {
@@ -1543,7 +1683,7 @@
 
   .footerTop {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 22px;
   }
 
   .footerBottom {
@@ -1555,52 +1695,28 @@
 
 @media (max-width: 480px) {
   .heroHeadline {
-    font-size: 30px;
-    letter-spacing: -0.8px;
+    font-size: 28px;
+    letter-spacing: -0.6px;
   }
 
   .heroSubhead {
-    font-size: 13.5px;
+    font-size: 13px;
   }
 
-  .canvasUrl {
-    display: none;
+  .canvasTab {
+    padding: 7px 2px;
+    font-size: 10.5px;
   }
 
-  .decisionVectorGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .benchmarkGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .benchmarkCard {
-    padding: 16px 10px;
-    border-radius: var(--radius-md);
-  }
-
-  .benchmarkNumber {
-    font-size: 26px;
-    margin-bottom: 4px;
-  }
-
-  .benchmarkLabel {
-    font-size: 11px;
-    margin-bottom: 4px;
-  }
-
-  .benchmarkDetail {
-    font-size: 10px;
-    line-height: 1.3;
+  .tabIcon {
+    font-size: 12px;
   }
 
   .sectionTitle {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .ctaHeading {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
